@@ -23,7 +23,7 @@ Load a merged metaphlan profile which contains metadata and taxonomic abundances
                       sep = "\t"))
 ```
 |sample|P057|P054|P052|...|P049|
-|----|----|----|---|---|---|---|
+|----|----|----|---|---|---|
 |sexual_orientation|MSM|MSM|MSM|...|Non-MSM|
 |HIV_status|negative|positive|positive|...|negative|
 |ethnicity|Caucasian|Caucasian|Caucasian|...|Caucasian|
