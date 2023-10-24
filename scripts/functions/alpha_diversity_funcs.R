@@ -5,7 +5,7 @@ SE_converter <- function(md_rows, tax_starting_row, mpa_md) {
     # tax_starting_row: an interger corresponding to the row where taxonomic abundances start.
     # mpa_md: a metaphlan table wedged with metadata, in the form of dataframe.
     md_df <- mpa_md[md_rows,] # extract metadata part from mpa_md table
-    tax_df <- mpa_md[tax_starting_row: nrow(mpa_df),] # extract taxonomic abundances part from mpa_md table
+    tax_df <- mpa_md[tax_starting_row: nrow(mpa_md),] # extract taxonomic abundances part from mpa_md table
     
     ### convert md_df to a form compatible with SummarisedExperiment ### 
     SE_md_df <- md_df[, -1]
@@ -70,7 +70,7 @@ make_boxplot <- function(df, xlabel, ylabel, font_size = 11, jitter_width = 0.2,
               ggpubr::ggboxplot(data = df, x = xlabel, y = ylabel, color = xlabel,
               palette = pal, ylab = ylabel, xlab = xlabel,
               add = "jitter", add.params = list(size = dot_size, jitter = jitter_width)) +
-              ggpubr::stat_compare_means() + stat_compare_means(comparisons = group_pairs, exact = T, alternative = "greater") +
+              ggpubr::stat_compare_means() + ggpubr::stat_compare_means(comparisons = group_pairs, exact = T, alternative = "greater") +
               ggplot2::stat_summary(fun.data = function(x) data.frame(y= max(df[, ylabel]), label = paste("Mean=",mean(x))), geom="text") +
               ggplot2::theme(text = ggplot2::element_text(size = font_size, family = font_style))
            }
@@ -81,4 +81,13 @@ make_boxplot <- function(df, xlabel, ylabel, font_size = 11, jitter_width = 0.2,
         add = "jitter", add.params = list(size = dot_size, jitter = jitter_width)) +
         ggplot2::theme(text = ggplot2::element_text(size = font_size, family = font_style))
     }
+}
+
+my_combn <- function(x) {
+  combs <- list()
+  comb_matrix <- combn(x, 2)
+  for (i in 1: ncol(comb_matrix)) {
+    combs[[i]]  <- comb_matrix[,i]
+  }
+  combs
 }

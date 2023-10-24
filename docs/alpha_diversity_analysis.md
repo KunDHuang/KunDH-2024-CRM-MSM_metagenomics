@@ -85,7 +85,7 @@ To compare the difference of alpha diversities between groups, we can use functi
 ```{r}
 >shannon <- make_boxplot(alpha_df, "sexual_orientation", "shannon", stats = TRUE, pal = c("#888888", "#eb2525"))
 >richness <- make_boxplot(alpha_df, "sexual_orientation", "observed", stats = TRUE, pal = c("#888888", "#eb2525"))
->multi_plot <- ggplot2::ggarrange(shannon, richness, ncol = 2)
+>multi_plot <- ggpubr::ggarrange(shannon, richness, ncol = 2)
 >ggplot2::ggsave(file = "shannon_richness.svg", plot = multi_plot, width = 4, height = 5)
 ```
 ![Alpha Diversity Plots](../images/alpha_diversity_plots.png)
