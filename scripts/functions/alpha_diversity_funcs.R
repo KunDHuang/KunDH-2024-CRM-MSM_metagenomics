@@ -91,3 +91,22 @@ my_combn <- function(x) {
   }
   combs
 }
+
+felm_fixed <- function(data_frame, f_factors, t_factor, measure) {
+  # This function is to perform fixed effect linear modeling
+  # data_frame: a dataframe containing measures and corresponding effects  
+  # f_factors: a vector of header names in the dataframe which represent fixed effects
+  # t_factors: test factor name in the form of string
+  # measure: the measured values in column, e.g., shannon or richness
+#   all_factors <- c(t_factor, f_factors)
+#   for (i in all_factors) {
+#     vars <- unique(data_frame[, i])
+#     lookup <- setNames(seq_along(vars) -1, vars)
+#     data_frame[, i] <- lookup[data_frame[, i]]
+#   }
+#   View(data_frame)
+  str1 <- paste0(c(t_factor, paste0(f_factors, collapse = " + ")), collapse = " + ")
+  str2 <- paste0(c(measure, str1), collapse = " ~ ")
+  felm_stats <- lfe::felm(eval(parse(text = str2)), data = data_frame)
+  felm_stats
+}

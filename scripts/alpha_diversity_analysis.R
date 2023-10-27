@@ -13,6 +13,10 @@ SE <- SE_converter(1:5, 6, mpa_df)
 alpha_df <- est_alpha_diversity(SE)
 
 View(alpha_df)
+
 make_boxplot(alpha_df, "sexual_orientation", "shannon", stats = FALSE, pal = c("#888888", "#eb2525"),
                        font_size = 18)
 ##### Testing code  ######
+
+a <- felm_fixed(alpha_df, c("HIV_status", "antibiotics_6month"), "sexual_orientation", "shannon")
+summary(a)
