@@ -11,7 +11,7 @@ This tutorial is to introduce how to use cumulative distribution function to ins
 
 
 #### Drawing cumulative distribution function for reads count
-You will use a python script [cumulative_distribution_function.py](../scripts/cumulative_distribution_function.py) in the path `path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/scripts/`, and a table containing the number of reads in each metagenomic sample like [example_reads_stats.tsv](../example_data/reads_stats_color_map.tsv) in the path `path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/example_data/`. 
+You will use a python script [cumulative_distribution_function.py](../scripts/cumulative_distribution_function.py) in the path `path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/scripts/`, and a table containing the number of reads in each metagenomic sample like [example_reads_stats.tsv](../example_data/example_reads_stats.tsv) in the path `path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/example_data/`. 
 
 ```{Python}
 $ cumulative_distribution_function.py -h
