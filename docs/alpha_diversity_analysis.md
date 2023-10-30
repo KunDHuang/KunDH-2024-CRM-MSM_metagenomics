@@ -82,7 +82,7 @@ To compare the difference of alpha diversities between groups, we can use functi
 * `font_style`: the font style, default: `Arial`
 * `pal`: a list of color codes for pallete, e.g. c(#888888, #eb2525). The order corresponds the column order of boxplot.
 * `stats`: wilcox rank-sum test. default: `TRUE`
-
+~
 ```{r}
 >shannon <- make_boxplot(df = alpha_df,
                          xlabel = "sexual_orientation",

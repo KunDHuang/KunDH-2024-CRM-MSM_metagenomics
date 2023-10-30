@@ -5,4 +5,5 @@ Computational workflows for reproducing analysis in the study of Huang et al., 2
 1. [Setup]()
 2. [General usage]()
 3. Detailed tutorials
+    * [Reads quality inspection with cumulative distribution function](./doc/cumulative_distribution_function.py)
     * [Alpha diversity analysis](./docs/alpha_diversity_analysis.md)
