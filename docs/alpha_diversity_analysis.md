@@ -19,7 +19,7 @@ Open a new working R script, and load our funtion-packed R script from which you
 Load a merged metaphlan profile which contains metadata and taxonomic abundances. Here, we are going to use an example file for demostration.
 
 ```{r}
->mpa_df <- data.frame(read.csv("path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/example_data/>merged_abundance_table_species_sgb_md.tsv",
+>mpa_df <- data.frame(read.csv("path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/example_data/merged_abundance_table_species_sgb_md.tsv",
                       header = TRUE,
                       sep = "\t"))
 ```

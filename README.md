@@ -7,3 +7,4 @@ Computational workflows for reproducing analysis in the study of Huang et al., 2
 3. Detailed tutorials
     * [Reads quality inspection with cumulative distribution function](./docs/cumulative_distribution_function.md)
     * [Alpha diversity analysis](./docs/alpha_diversity_analysis.md)
+    * [Beta diversity analysis](./docs/beta_diversity_analysis.md)

@@ -1,22 +1,26 @@
 
 
 ###### Testing code  ######
-mpa_df <- data.frame(read.csv("/Users/kunhuang/R_analysis_mirror/msm_analysis/manuscript_prep/alpha_diversity_msm_nomsm_reproduce/merged_abundance_table_species_sgb_md.tsv",
-                     header = TRUE,
-                     sep = "\t"))
+mat <- read.csv("/Users/kunhuang/R_analysis_mirror/msm_analysis/sexual_practice_analysis/msm_mpa4_run2_matrix.tsv",
+                    header = TRUE,
+                    sep = "\t")
+md <- read.csv("/Users/kunhuang/R_analysis_mirror/msm_analysis/sexual_practice_analysis/msm_mpa4_run2_metadata.tsv",
+                    header = TRUE,
+                    sep = "\t")
 
-View(mpa_df)
-source(file = "/Users/kunhuang/repos/KunDH-2023-CRM-MSM_metagenomics/scripts/functions/alpha_diversity_funcs.R")
-SE <- SE_converter(1:5, 6, mpa_df)
 
 
-alpha_df <- est_alpha_diversity(SE)
+source(file = "/Users/kunhuang/repos/KunDH-2023-CRM-MSM_metagenomics/scripts/functions/beta_diversity_funcs.R")
 
-View(alpha_df)
+coor_df <- generate_coordis_df(mat, md, "euclidean")
+View(coor_df)
 
-make_boxplot(alpha_df, "sexual_orientation", "shannon", stats = FALSE, pal = c("#888888", "#eb2525"),
-                       font_size = 18)
-##### Testing code  ######
-
-a <- felm_fixed(alpha_df, c("HIV_status", "antibiotics_6month"), "sexual_orientation", "shannon")
-summary(a)
+pcoa_plot(mat, md, "bray", "condom_use", 20, 4, to_rm = c("no_receptive_anal_intercourse"))
+est_permanova(mat, md, "condom_use", c("Antibiotics_6mo", "HIV_status", "inflammatory_bowel_disease", "BMI_kg_m2_WHO", "diet"))
+est_permanova(mat = mat, 
+              md = md, 
+              variable = "condom_use", 
+              covariables = c("Antibiotics_6mo", "HIV_status", "inflammatory_bowel_disease", "BMI_kg_m2_WHO", "diet"),
+              nper = 999, 
+              to_rm = c("no_receptive_anal_intercourse"),
+              by_method = "margin")

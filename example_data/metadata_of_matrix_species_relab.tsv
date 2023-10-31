@@ -1,0 +1,67 @@
+sample	sexual_orientation.x	HIV_status	Ethnicity	Antibiotics_6mo	BMI_kg_m2_WHO	STI	diet	number_partners	receptive_anal_intercourse	oral sex	lubricant	condom_use	inflammatory_bowel_disease
+P057	MSM	negative	Caucasian	Yes	ObeseClassI	negative	no	>3	no	yes	no	no_receptive_anal_intercourse	no
+P054	MSM	positive	Caucasian	No	Overweight	negative	vegetarian	0_3	yes	yes	always	always	no
+P052	MSM	positive	Caucasian	No	Normal	positive	carb_and_proteinrich	>3	yes	yes	sometimes	sometimes	no
+P050	MSM	negative	Caucasian	No	Normal	negative	no	>3	yes	no	always	sometimes	no
+P049	MSM	negative	Caucasian	Yes	Overweight	negative	no	>3	yes	yes	sometimes	sometimes	yes
+P048	MSM	negative	Caucasian	Yes	Normal	positive	no	>3	yes	yes	always	sometimes	no
+P047	MSM	negative	Caucasian	No	ObeseClassIII	negative	no	>3	yes	yes	always	sometimes	no
+P046	MSM	negative	Caucasian	Yes	Normal	positive	no	>3	yes	yes	always	sometimes	yes
+P044	MSM	positive	Caucasian	Yes	Overweight	positive	no	>3	yes	yes	always	no	yes
+P043	MSM	negative	Caucasian	No	Overweight	positive	no	0_3	yes	yes	sometimes	sometimes	yes
+P042	MSM	positive	Caucasian	Yes	Normal	positive	no	>3	yes	yes	always	sometimes	yes
+P039	MSM	positive	Caucasian	Yes	Overweight	positive	no	>3	yes	yes	always	sometimes	yes
+P037	MSM	negative	Caucasian	Yes	Normal	positive	no	>3	yes	yes	sometimes	sometimes	yes
+P036	MSM	negative	Caucasian	Yes	Normal	positive	no	>3	yes	yes	sometimes	no	yes
+P035	MSM	negative	Caucasian	Yes	Normal	positive	no	>3	yes	yes	always	no	yes
+P034	MSM	positive	Caucasian		Overweight	negative	no	0_3	no	no	no	no_receptive_anal_intercourse	no
+P029	MSM	positive	Caucasian	No	Overweight	positive	no	>3	yes	yes	always	always	no
+P028	MSM	negative	Caucasian	No	Normal	positive	no	>3	yes	yes	sometimes	no	no
+P027	MSM	positive	Caucasian	No	Normal	negative	no	0_3	yes	yes	always	always	no
+P014	MSM	positive	Caucasian	No	Normal	negative	no	0_3	yes	yes	always	always	no
+P007	MSM	positive	Caucasian	No	Overweight	negative	no	0_3	yes	no	always	always	no
+P006	MSM	positive	Caucasian	No	ObeseClassII	negative	no	>3	yes	yes	sometimes	always	no
+P003	MSM	negative	Caucasian	No	Normal	negative	no	0_3	no	no	no	no_receptive_anal_intercourse	yes
+P002	MSM	negative	Caucasian	No	Overweight	negative	low_carb	0_3	no	yes	no	no_receptive_anal_intercourse	no
+MSM_L2_F2	MSM	positive	Caucasian	No	Overweight	positive	no	0_3	yes	yes		always	yes
+MSM_L2_F1	MSM	positive	Caucasian	No	Normal	negative	no	0_3	no	no	no	no_receptive_anal_intercourse	no
+MSM_L2_E9	MSM	negative	Caucasian	Yes	ObeseClassI	negative	no	>3	no	yes	no	no_receptive_anal_intercourse	no
+MSM_L2_E8	MSM	positive	Caucasian	Yes	Overweight	negative	no	>3	yes	yes	sometimes	sometimes	no
+MSM_L2_E7	MSM	positive	Caucasian	No	Overweight	negative	no	0_3	yes	yes	always	always	no
+MSM_L2_E6	MSM	positive	Caucasian	No	Overweight	negative	vegetarian	0_3	yes	yes	always	always	no
+MSM_L2_E5	MSM	positive	Caucasian	Yes	Normal	negative	low_carb	0_3	yes	yes	sometimes	sometimes	no
+MSM_L2_E4	MSM	positive	Caucasian	No	Normal	positive	carb_and_proteinrich	>3	yes	yes	sometimes	sometimes	no
+MSM_L2_E3	MSM	positive	Caucasian	No	Normal	negative	no	>3	yes	yes	sometimes	sometimes	no
+MSM_L2_E2	MSM	negative	Caucasian	No	Normal	negative	no	>3	yes	no	always	sometimes	no
+MSM_L2_E1	MSM	negative	Caucasian	Yes	Overweight	negative	no	>3	yes	yes	sometimes	sometimes	yes
+MSM_L2_E12	MSM	positive	Caucasian	No	Overweight	negative	no	0_3	yes	no	always	always	no
+MSM_L2_E11	MSM	positive	Caucasian	No	Normal	negative	no	0_3	yes	yes	no	no	no
+MSM_L2_D9	MSM	positive	Caucasian	No	Overweight	negative	no	0_3	yes	yes	sometimes	no	no
+MSM_L2_D8	MSM	positive	Caucasian	Yes	Overweight	positive	no	>3	yes	yes	always	no	yes
+MSM_L2_D7	MSM	negative	Caucasian	No	Overweight	positive	no	0_3	yes	yes	sometimes	sometimes	yes
+MSM_L2_D6	MSM	positive	Caucasian	Yes	Normal	positive	no	>3	yes	yes	always	sometimes	yes
+MSM_L2_D5	MSM	negative	Caucasian	Yes	Normal	positive	no	>3	yes	yes		sometimes	no
+MSM_L2_D3	MSM	positive	Caucasian	Yes	Overweight	positive	no	>3	yes	yes	always	sometimes	yes
+MSM_L2_D2	MSM	positive	Caucasian	Yes	Overweight	positive	no	0_3	yes	no	sometimes	sometimes	yes
+MSM_L2_D1	MSM	negative	Caucasian	Yes	Normal	positive	no	>3	yes	yes	sometimes	sometimes	yes
+MSM_L2_D12	MSM	negative	Caucasian	Yes	Normal	positive	no	>3	yes	yes	always	sometimes	no
+MSM_L2_D11	MSM	negative	Caucasian	No	ObeseClassIII	negative	no	>3	yes	yes	always	sometimes	no
+MSM_L2_D10	MSM	negative	Caucasian	Yes	Normal	positive	no	>3	yes	yes	always	sometimes	yes
+MSM_L2_C9	MSM	positive	Caucasian	No	Normal	positive	vegetarian	0_3	yes	yes	always	always	no
+MSM_L2_C8	MSM	positive	Caucasian	Yes	Normal	positive	no	>3	yes			no	no
+MSM_L2_C7	MSM	positive	Caucasian	No	Normal	positive	no	0_3	yes	yes	always	always	no
+MSM_L2_C6	MSM	positive	Caucasian	Yes	Underweight	negative	no	0_3	no		no	no_receptive_anal_intercourse	yes
+MSM_L2_C2	MSM	positive	Caucasian	No	Overweight	negative	no	0_3	yes	no	always		no
+MSM_L2_C1	MSM	positive	Caucasian	No	Overweight	negative	no	0_3	yes	no			no
+MSM_L2_C12	MSM	negative	Caucasian	Yes	Normal	positive	no	>3	yes	yes	sometimes	no	yes
+MSM_L2_B9	MSM	positive	Caucasian	No	Normal	positive	no	0_3	yes	yes	sometimes	no	no
+MSM_L2_B8	MSM	positive	Caucasian	No	Normal	negative	no	>3	yes	yes	sometimes	no	no
+MSM_L2_B6	MSM	positive	Caucasian	Yes	Overweight	positive	no	0_3	yes	yes	always	no	no
+MSM_L2_B5	MSM	positive	Caucasian	No	Normal	negative	no	>3	yes	yes		no	no
+MSM_L2_B12	MSM	positive	Caucasian	No	Normal	negative	no	>3	yes	yes	always	always	no
+MSM_L2_B11	MSM	positive	Caucasian	No	Normal	negative	low_carb	>3	yes			no	yes
+MSM_L2_A8	MSM	positive	Caucasian	No	Normal	positive	no	>3	yes	yes	sometimes	no	yes
+MSM_L2_A5	MSM	positive	Caucasian	No	Overweight	positive	no	>3	yes	yes	sometimes	no	no
+MSM_L2_A1	MSM	positive	Asian	No	Normal	negative	no	>3	yes	yes	always	sometimes	no
+MSM_L2_A12	MSM	positive	Caucasian	No	Overweight	negative	no	>3	yes	yes	always	no	no
+MSM_L2_A10	MSM	positive	Caucasian	No	Normal	positive	no	0_3	yes	yes	sometimes	no	no
