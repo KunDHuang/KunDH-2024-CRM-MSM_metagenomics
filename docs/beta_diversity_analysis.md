@@ -219,6 +219,6 @@ If you wish to enhance the aesthecity of PCoA plot using R but with the pre-calc
                 color_palettes = c("Non-MSM" = "#888888", "MSM" = "#eb2525"))
   ```
 
-[PCoA Side plot](../images/pcoa_w_sideplot.png)
+![PCoA Side plot](../images/pcoa_w_sideplot.png)
 
 **Note:** The figure displayed above had been edited using [inkscape](https://inkscape.org/) on the base of the crude output in order to enhance the readability and aesthetic sense.
