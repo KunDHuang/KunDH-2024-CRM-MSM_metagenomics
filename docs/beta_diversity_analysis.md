@@ -191,6 +191,34 @@ $multi_variable_pcoa_plot.py --abundance_table mvpp_mpa_species_relab.tsv --meta
 
 ![Multiple variable PCoA plot](../images/mvpp_pcoa.png)
 
-As optional ouputs, `multi_variable_pcoa_plot.py` also generates non-adjustment PERMANOVA test (e.g. [mvpp_permanova.tsv](../example_data/mvpp_permanova.tsv)) and coordinates of PC1 and PC2 (e.g. [mvpp_coordinates.tsv](../example_data/mvpp_coordinates.tsv)) which can be used in visualization in other ways we will discuss shortly below.
+As optional ouputs, `get_palette(palette = "default", k)` also generates non-adjustment PERMANOVA test (e.g. [mvpp_permanova.tsv](../example_data/mvpp_permanova.tsv)) and coordinates of PC1 and PC2 (e.g. [mvpp_coordinates.tsv](../example_data/mvpp_coordinates.tsv)) which can be used in visualization in other ways we will discuss shortly below.
 
 ## A method mixing R and Python
+
+If you wish to enhance the aesthecity of PCoA plot using R but with the pre-calculated coordinates from [multi_variable_pcoa_plot.py](../scripts/multi_variable_pcoa_plot.py) with the flag `--df_opt`, you are suggested to use our R function `pcoa_sideplot()` on coordinate table from `multi_variable_pcoa_plot.py` with arguments:
+  * `coordinate_df`: the coordinate table generated from python script multi_variable_pcoa_plot.py --df_opt, for example [coordinate_table.tsv](../example_data/coordinate_table.tsv). 
+  * `variable`: specify the variable you want to inspect on PCoA.
+  * `color_palettes`: give a named vector to pair color palettes with variable group names. default: [ggpubr default palette]
+  * `coordinate_1`: specify the column header of the 1st coordinate. default: [*PC1*]
+  * `coordinate_2`: specify the column header of the 2nd coordinate. default: [*PC2*]
+  * `marker_size`: specify the marker size of the PCoA plot. default: [3]
+  * `font_size`: specify the font size of PCoA labels and tick labels. default: [20]
+  * `font_style`: specify the font style of PCoA labels and tick labels. default: [*Arial*]
+
+  For example:
+
+  ```{r}
+  >source(file = "path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/scripts/functions/beta_diversity_funcs.R")
+  >coordinate_df <- data.frame(read.csv("path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/example_data/coordinate_table.tsv",
+                               header = TRUE,
+                               sep = "\t"))
+  >pcoa_sideplot(coordinate_df = coordinate,
+                coordinate_1 = "PC1",
+                coordinate_2 = "PC2",
+                variable = "sexual_orientation",
+                color_palettes = c("Non-MSM" = "#888888", "MSM" = "#eb2525"))
+  ```
+
+[PCoA Side plot](../images/pcoa_w_sideplot.png)
+
+**Note:** The figure displayed above had been edited using [inkscape](https://inkscape.org/) on the base of the crude output in order to enhance the readability and aesthetic sense.

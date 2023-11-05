@@ -24,3 +24,13 @@ est_permanova(mat = mat,
               nper = 999, 
               to_rm = c("no_receptive_anal_intercourse"),
               by_method = "margin")
+
+pcoa_df <- data.frame(read.csv("/Users/kunhuang/R_analysis_mirror/msm_analysis/manuscript_05012023/figure1/pcoa_df.tsv",
+                      header = TRUE,
+                      sep = "\t"))
+
+length(unique(pcoa_df[, "sexual_orientation"]))
+pcoa_sideplot(coordinate_df = pcoa_df,
+              coordinate_1 = "PC1",
+              coordinate_2 = "PC2",
+              variable = "sexual_orientation")
