@@ -10,6 +10,7 @@ This tutorial is to use R-based functions as well as Python scripts to estimate 
 * [ape](https://cran.r-project.org/web/packages/ape/index.html)
 * [tidyverse](https://www.tidyverse.org/packages/)
 
+
 #### Beta diversity analysis, visualization and significance assessment
 
 Open a new working R script, and load our funtion-packed R script from which you can use relavant modules.
@@ -128,7 +129,7 @@ Below, we are showcasing how to inspect the beta diversity of microbiomes from t
 
 ## Python-based method
 
-#### R packages required
+#### Python packages required
 * [scikit-bio >= 0.5.6](https://scikit.bio/)
 * [pandas >= 1.3.5](https://pandas.pydata.org/)
 * [numpy >= 1.23.5](https://numpy.org/)
@@ -194,6 +195,13 @@ $multi_variable_pcoa_plot.py --abundance_table mvpp_mpa_species_relab.tsv --meta
 As optional ouputs, `get_palette(palette = "default", k)` also generates non-adjustment PERMANOVA test (e.g. [mvpp_permanova.tsv](../example_data/mvpp_permanova.tsv)) and coordinates of PC1 and PC2 (e.g. [mvpp_coordinates.tsv](../example_data/mvpp_coordinates.tsv)) which can be used in visualization in other ways we will discuss shortly below.
 
 ## A method mixing R and Python
+
+#### R packages required
+
+* [ggplot2](https://ggplot2.tidyverse.org/)
+* [cowplot](https://cran.r-project.org/web/packages/cowplot/index.html)
+
+#### Beta diversity analysis with PCoA plotting using pre-calculated coordinates
 
 If you wish to enhance the aesthecity of PCoA plot using R but with the pre-calculated coordinates from [multi_variable_pcoa_plot.py](../scripts/multi_variable_pcoa_plot.py) with the flag `--df_opt`, you are suggested to use our R function `pcoa_sideplot()` on coordinate table from `multi_variable_pcoa_plot.py` with arguments:
   * `coordinate_df`: the coordinate table generated from python script multi_variable_pcoa_plot.py --df_opt, for example [coordinate_table.tsv](../example_data/coordinate_table.tsv). 
