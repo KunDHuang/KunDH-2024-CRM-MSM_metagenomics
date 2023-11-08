@@ -40,8 +40,8 @@ $ step_curve_drawer.py --abundance_table mpa_pcopri_abundances_md.tsv --variable
 ~~~
 
 The output `copresence_plot.png` looks like:
-![copresence_plot.png](../images/copresence_plot.png) 
 
+![copresence_plot.png](../images/copresence_plot.png) 
 
 
 **Note:** The figure displayed above had been edited using [inkscape](https://inkscape.org/) on the base of the crude output in order to enhance the readability and aesthetic sense.
