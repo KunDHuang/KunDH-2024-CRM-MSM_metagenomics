@@ -9,3 +9,4 @@ Computational workflows for reproducing analysis in the study of Huang et al., 2
     * [Alpha diversity analysis](./docs/alpha_diversity_analysis.md)
     * [Beta diversity analysis](./docs/beta_diversity_analysis.md)
     * [Co-presence analysis](./docs/copresence_analysis.md)
+    * [ComplexHeatmap plotting](./docs/make_ComplexHeatmap.md)
