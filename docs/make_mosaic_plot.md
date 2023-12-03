@@ -33,7 +33,7 @@ Example command:
 ```{bash}
 mosaic_plot.py --input two_variable_mosaic.tsv --facecolor_map facecolor_map.tsv --output mosaic_plot.png
 ```
-![Mosaic plot](../images/)
+![Mosaic plot](../images/mosaic_plot.png)
 
 *Note*
 The face color of mosaic plot should be specified as in the example [mapping file](../example_data/facecolor_map.tsv).
