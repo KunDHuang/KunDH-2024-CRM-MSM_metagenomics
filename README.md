@@ -10,3 +10,4 @@ Computational workflows for reproducing analysis in the study of Huang et al., 2
     * [Beta diversity analysis](./docs/beta_diversity_analysis.md)
     * [Co-presence analysis](./docs/copresence_analysis.md)
     * [ComplexHeatmap plotting](./docs/make_ComplexHeatmap.md)
+    * [Make mosaic plot](./docs/make_mosaic_plot.md)
