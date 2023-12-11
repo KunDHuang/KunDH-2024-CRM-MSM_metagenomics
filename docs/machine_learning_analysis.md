@@ -56,3 +56,72 @@ It generates a ROC-AUC curve to show the overall predictive capability of random
 Optionally, it can also generate the raw output [roc_auc_npartners_values.tsv](../example_data/roc_auc_npartners_values.tsv) used to generate the plot above. One can use it for other purposes.
 
 **Note:** The figure displayed above had been edited using [inkscape](https://inkscape.org/) on the base of the crude output in order to enhance the readability and aesthetic sense.
+
+## Visualize standard deviation of machine learning estimates
+
+#### R packages required
+
+* [ggplot2](https://ggplot2.tidyverse.org/)
+* [ggpubr](https://rpkgs.datanovia.com/ggpubr/)
+
+#### Plot the distribution of ROC-AUC estimates with standard deviation
+
+We showcased above how to use ROC-AUC curve to evaluate the predictive capability of the microbiome by benchmarking with random effects. Here, we are going to introduce helper functions `data_summary` and `std_deviation_plot` implemented in [rocauc_stdv_funcs.R](../scripts/functions/rocauc_stdv_funcs.R) to visualize the standard deviations of ROC-AUC estimates for results from multiple Random Forest classifications.
+
+`data_summary` is function to summarize raw ROC-AUC estimates in standard deviation with three arguments:
+  * `data`: Input a dataframe as input.
+  * `var_estimates`: The column header indicating ROC-AUC estimates for the target variable.
+  * `groups`: The column header containing the group names.
+
+`std_deviation_plot` is a function to plot ROC-AUC estimates with error bars based on standard deviation with arguments:
+  * `df`: Input the dataframe of standard deviations of ROC-AUC estimates. 
+  * `x_axis`: Specify the column header (groups usually) for X axis.
+  * `y_axis`: Specify the column header (ROC-AUC means usually) for Y axis.
+  * `stdv_column`: Specify the column header indicating standard deviation.
+  * `palette`: Specify the palette for colors, default `[jco]`.
+  * `y_label`: Name the Y label, default `[ROC-AUC]`.
+  * `x_label`: Name the X laebl, default `NULL`.
+  * `order_x_axis`: give a vector to specify the order of columns along X axis.
+  * `font_size`: specify the font size, default `[11]`.
+  * `font_family`: specify the font family, default `[Arial]`.
+
+Here, we will use as demo data [merged ROC-AUC estimates](../example_data/roc_auc_merged.tsv) from performing Random Forest for classiying five sexual practices including *receptive anal intercourse*, *number of partners*, *oral sex*, *sex transmitted infection*, and *condom use*.
+
+First, open a new working R script, and load our funtion-packed R script from which you can use relavant modules.
+
+```{r}
+>source(file = "path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/scripts/functions/rocauc_stdv_diversity_funcs.R")
+```
+
+Second, load [merged ROC-AUC estimates](../example_data/roc_auc_merged.tsv) into a R dataframe.
+
+```{r}
+>roc_auc_merged <- data.frame(read.csv("path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/example_data/roc_auc_merged.tsv", header = TRUE, sep = "\t"))
+```
+
+Third, make a data summary in standard deviations.
+
+```{r}
+>roc_auc_std <- data_summary(data = roc_auc_merged,
+                            var_estimates = "roc.auc",
+                            groups = "sexual.practice")
+```
+
+Finally, plot ROC-AUC estimates in standard deviation.
+
+```{r}
+>rocauc_plot <- std_deviation_plot(df = std,
+                                  x_axis = "sexual.practice",
+                                  y_axis = "roc.auc",
+                                  stdv_column = "sd",
+                                  order = c("Receptive anal intercourse", "Number of partners",
+                                            "Oral sex", "Sex transmitted infection", "Condom use"))
+```
+
+Optionally, adjusting the plot with `ggplot2` (or `ggpubr`) functions, for example resetting y-axis limit and rotating x-axis labels.
+
+```{r}
+>rocauc_plot + ggplot2::ylim(0, 1) + ggpubr::rotate_x_text(45)
+```
+
+![ROC-AUC standard deviation plot](../images/rocauc_stdv_plot.png)

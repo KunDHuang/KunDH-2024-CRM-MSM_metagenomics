@@ -81,3 +81,16 @@ plot_complex_heatmap(global_mat,
                      transformation = "binary")
 dev.off()
 
+
+source(file = "/Users/kunhuang/repos/KunDH-2023-CRM-MSM_metagenomics/scripts/functions/rocauc_stdv_funcs.R")
+roc_auc_merged <- data.frame(read.csv("/Users/kunhuang/repos/KunDH-2023-CRM-MSM_metagenomics/example_data/roc_auc_merged.tsv",
+                                      header = TRUE,
+                                      sep = "\t"))
+
+
+std <- data_summary(roc_auc_merged, "roc.auc", "sexual.practice")
+
+dev_plot <- std_deviation_plot(std, "sexual.practice", "roc.auc", "sd",
+                               order = c("Receptive anal intercourse", "Number of partners",
+                    "Oral sex", "Sex transmitted infection", "Condom use"))
+dev_plot + ggplot2::ylim(0, 1) + ggpubr::rotate_x_text(45)
