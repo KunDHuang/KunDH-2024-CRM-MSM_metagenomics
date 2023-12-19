@@ -12,3 +12,4 @@ Computational workflows for reproducing analysis in the study of Huang et al., 2
     * [ComplexHeatmap plotting](./docs/make_ComplexHeatmap.md)
     * [Make mosaic plot](./docs/make_mosaic_plot.md)
     * [Machine learning analysis](./docs/machine_learning_analysis.md)
+    * [Deviation plot, UpSet plot, Lollipop plot](./docs/several_plots.md)

@@ -1,0 +1,16 @@
+feature	class	lda_score
+Prevotella_pectinovora.t__SGB1662	>3	2.90892682582
+Campylobacteraceae_bacterium.t__SGB19434	>3	2.09775431466
+Prevotella_copri_clade_B.t__SGB1613	>3	3.32689154647
+Anaerotignum_faecicola.t__SGB5190	>3	2.54310434257
+Prevotellamassilia_timonensis.t__SGB1477_group	>3	3.58527833147
+Bacteroidaceae_bacterium.t__SGB1404	>3	2.26330608764
+Brachyspira_pilosicoli.t__SGB5969	>3	2.15293448437
+Prevotella_copri_clade_C.t__SGB1644	>3	3.61680407159
+Ruminococcaceae_bacterium.t__SGB53515	>3	2.14953091947
+Lacrimispora_amygdalina.t__SGB4716	>3	2.27657186101
+Methanomassiliicoccales_archaeon.t__SGB376	0_3	-2.55446092418
+Clostridia_bacterium.t__SGB4365	0_3	-3.07742936737
+Blautia_massiliensis.t__SGB4826_group	0_3	-2.4521718043
+Lachnospira_pectinoschiza.t__SGB5075_group	0_3	-2.03813854392
+Oscillibacter_SGB15077.t__SGB15077	0_3	-2.06593180716
