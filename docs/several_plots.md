@@ -100,5 +100,5 @@ There are way more features to explore around for making an UpSet plot, please v
 Similar codes can be used for another set of LefSe biomarkers associated with: RAI: No (not receiving anal intercourse), having 0-3 sexual partners (# partners: 0-3), not practicing oral sex (Oral sex: No), free from sexually transmitted infection (STI: Negative), use condom during RAI (Condom use (during RAI): Yes).
 
 We can generate a nice plot showing the mutual biomarkers shared between different sexual practices by combining these plots.
-![UpSet plot](../images/upset_plot.png)
+![UpSet plot](../images/upset_plot.jpg)
 
