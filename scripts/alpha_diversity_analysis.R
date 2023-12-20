@@ -94,3 +94,10 @@ col_md <- "/Users/kunhuang/repos/KunDH-2023-CRM-MSM_metagenomics/example_data/pr
 #                                order = c("Receptive anal intercourse", "Number of partners",
 #                     "Oral sex", "Sex transmitted infection", "Condom use"))
 # dev_plot + ggplot2::ylim(0, 1) + ggpubr::rotate_x_text(45)
+
+
+source(file = "/Users/kunhuang/repos/KunDH-2023-CRM-MSM_metagenomics/scripts/functions/several_plots.R")
+mat_file = "/Users/kunhuang/repos/KunDH-2023-CRM-MSM_metagenomics/example_data/UpSet_matrix1.tsv"
+upset_plot(mat_file)
+
+
