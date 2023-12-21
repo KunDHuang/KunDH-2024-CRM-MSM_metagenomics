@@ -1,0 +1,11 @@
+type	group.number	shared.biomarker.number
+risk.increasing	1	104
+risk.increasing	2	25
+risk.increasing	3	5
+risk.increasing	4	0
+risk.increasing	5	0
+risk.reducing	1	60
+risk.reducing	2	5
+risk.reducing	3	0
+risk.reducing	4	0
+risk.reducing	5	0
