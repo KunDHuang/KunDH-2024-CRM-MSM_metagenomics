@@ -51,7 +51,7 @@ evaluation_kfold.py --mpa_df machine_learning_input.tsv --md_rows 0 --target_row
 ```
 
 It generates a ROC-AUC curve to show the overall predictive capability of random forest model fitting to our input microbiome taxonomic data.
-![roc_auc_npartners.png](../images/roc_auc_machine_learning.png)
+![roc_auc_npartners.jpg](../images/roc_auc_machine_learning.jpg)
 
 Optionally, it can also generate the raw output [roc_auc_npartners_values.tsv](../example_data/roc_auc_npartners_values.tsv) used to generate the plot above. One can use it for other purposes.
 
@@ -124,4 +124,4 @@ Optionally, adjusting the plot with `ggplot2` (or `ggpubr`) functions, for examp
 >rocauc_plot + ggplot2::ylim(0, 1) + ggpubr::rotate_x_text(45)
 ```
 
-![ROC-AUC standard deviation plot](../images/rocauc_stdv_plot.png)
+![ROC-AUC standard deviation plot](../images/rocauc_stdv_plot.jpg)

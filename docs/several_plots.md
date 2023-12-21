@@ -34,7 +34,7 @@ Use [ggdotchart](https://rpkgs.datanovia.com/ggpubr/reference/ggdotchart.html) i
 ) +  theme(text = element_text(size = 13, family = "Arial")) +  scale_x_discrete(position = "top")
 ```
 
-![LefSe biomarkers linked with #partners](../images/npartner_lefse_biomarkers.png)
+![LefSe biomarkers linked with #partners](../images/npartner_lefse_biomarkers.jpg)
 
 ### UpSet plot
 
