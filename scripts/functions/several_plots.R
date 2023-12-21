@@ -1,16 +1,3 @@
-#"""
-#1. The input should be a matrix compatible with UpSet plot.
-#2. mode should be optional, more than just intersect.
-#3. combination_column, background_column, and backgroud_patch_column should be given.
-#4. set_order can be adjusted by a vector of names.
-#5. ylim, and height also should be adjustable.
-#6. annotation_name_side, rotation angle.
-#7. parameters for decoration also should be adjustable.
-#"""
-
-
-
-
 
 library("ComplexHeatmap")
 upset_matrix <- data.frame(read.csv("/Users/kunhuang/repos/KunDH-2023-CRM-MSM_metagenomics/example_data/UpSet_matrix1.tsv",
@@ -47,3 +34,6 @@ decorate_annotation("# shared taxonomic biomarkers", {
             default.units = "native", just = c("left", "bottom"), 
             gp = gpar(fontsize = 6, col = "#404040"), rot = 45)
 })
+
+
+View(upset_matrix)

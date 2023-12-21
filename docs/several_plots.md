@@ -48,7 +48,7 @@ First of all, open a new R working script, and load our [example data](../exampl
 
 ```{r}
 >library("ComplexHeatmap")
->upset_matrix <- data.frame(read.csv("/Users/kunhuang/repos/KunDH-2023-CRM-MSM_metagenomics/example_data/UpSet_matrix1.tsv",
+>upset_matrix <- data.frame(read.csv("path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/example_data/UpSet_matrix1.tsv",
                                     header = TRUE,
                                     sep = "\t"))
 >rownames(upset_matrix) <- upset_matrix[, colnames(upset_matrix)[[1]]]
@@ -102,3 +102,42 @@ Similar codes can be used for another set of LefSe biomarkers associated with: R
 We can generate a nice plot showing the mutual biomarkers shared between different sexual practices by combining these plots.
 ![UpSet plot](../images/upset_plot.jpg)
 
+### Lollipop plot
+
+#### R packages required
+
+* [ggpubr](https://rpkgs.datanovia.com/ggpubr/)
+
+In the last section, we will use lillipop plot to show the number of shared biomarkers associated with different sexual practices.
+Here, you can start directly from our prepared file [shared_biomarkers.tsv](../example_data/shared_biomarkers.tsv) containing the number of LefSe biomarkers shared by different sexual practices (categorized as *risk.increasing* and *risk.reducing*).
+
+Firstly, open a new R working script, and load [shared_biomarkers.tsv](../example_data/shared_biomarkers.tsv) from `path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/examples/`.
+
+```{r}
+>library(ggpubr)
+>shared_biomarkers <- data.frame(read.csv("path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/example_data/shared_biomarkers.tsv",
+                                    header = TRUE,
+                                    sep = "\t"))
+```
+
+Once the data was loaded, we use a function [ggdotchart](https://rpkgs.datanovia.com/ggpubr/reference/ggdotchart.html) implement in [ggpubr](https://rpkgs.datanovia.com/ggpubr/) for visualization.
+
+```{r}
+>ggdotchart(shared_biomarkers, x = "group.number", y ="shared.biomarker.number",
+           color = "type", palette = c("#fb5238", "#469537"), size = 5, 
+           add = "segment",
+           shape = 19,
+           group = "cate",
+           add.params = list(color = "lightgray", size = 2.5),
+           position = position_dodge(0.25),
+           ggtheme = theme_pubclean()
+) + geom_text(
+  aes(label = n_common_sps, group = cate), 
+  position = position_dodge(0.8),
+  vjust = -0.5, size = 3.5
+)
+```
+
+![shared biomarker in combinations](../images/shared_biomarkers.jpg)
+
+Note: The figures displayed above had been edited and arranged using inkscape on the base of the crude output in order to enhance the readability and aesthetic sense.
