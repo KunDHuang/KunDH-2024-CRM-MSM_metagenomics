@@ -1,5 +1,7 @@
-# KunDH-2023-CRM-MSM_metagenomics
-Computational workflows for reproducing analysis in the study of Huang et al., 2023
+# KunDH-2024-CRM-MSM_metagenomics
+Computational workflows for reproducing analysis in the study of Huang et al., 2024
+
+![Graphical abstract](./images/graphical_abstract.jpg)
 
 #### Table of contents
 1. [Setup]()
