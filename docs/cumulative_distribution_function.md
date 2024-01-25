@@ -52,6 +52,6 @@ $ cumulative_distribution_function.py --input_table example_reads_stats.tsv --ou
 ```
 If you wish to assign specific colors to variable categories, for example, *gray* to *MSM* and *red* to *Non-MSM*, you can use a color palette map such as [reads_stats_color_map.tsv](../example_data/reads_stats_color_map.tsv) in the path `path_to_the_package/KunDH-2023-CRM-MSM_metagenomics/example_data/`.
 
-![Cumulative distribution function of QC and Raw reads](../images/cumulative_distribution_functions.png)
+![Cumulative distribution function of QC and Raw reads](../images/cumulative_distribution_functions.jpg)
 
 **Note:** The figure displayed above had been edited and arranged using [inkscape](https://inkscape.org/) on the base of the crude output in order to enhance the readability and aesthetic sense.

@@ -72,7 +72,7 @@ Here, we show an example by visualizing relative abundances of *Prevotellaceae* 
                      transformation = "log10")
 ```
 
-![Prevotellaceae relative abundances in MSM and Non-MSM](../images/prevotellaceae_relab.png)
+![Prevotellaceae relative abundances in MSM and Non-MSM](../images/prevotellaceae_relab.jpg)
 
 #####Example 2: Visualize presence and absence of a group of species across global populations
 
@@ -103,4 +103,4 @@ plot_complex_heatmap(global_mat,
                      color_func = col_func,
                      transformation = "binary")
 ```
-![Presence and absence of enriched species in global populations](../images/global_presence.png)
+![Presence and absence of enriched species in global populations](../images/global_presence.jpg)
